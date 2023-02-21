@@ -9,9 +9,11 @@ function App() {
   const [todos, setTodos ] = useState([]);
   
   const handleButtonClick = () => {
-    const singleTodo =  todo;
-    setTodos([...todos, singleTodo])
-    setTodo("")
+    if(todo.length>0){
+       const singleTodo =  todo;
+       setTodos([...todos, singleTodo])
+       setTodo("")
+    }
   }
 
   const handleOnChange = (event) => {
@@ -35,8 +37,8 @@ function App() {
             <Input handleOnChange={handleOnChange} todo={todo} />
           </div>
           <div className="button-box">
-            <button type='button' onClick={handleButtonClick}>Add Todo</button>
-            <button type="button" onClick={handleResetBtn}>Reset List</button>
+            <button type='button' onClick={handleButtonClick} disabled= {todo.length==0}>Add Todo</button>
+            <button type="button" onClick={handleResetBtn} disabled= {todos.length==0}>Reset List</button>
           </div>
         </div>
         <div className="todo-list">
