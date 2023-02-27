@@ -1,0 +1,29 @@
+.main-box {
+    margin-left: 40%;
+    margin-top: 10%;
+
+}
+.input-box {
+
+}
+.main-button {
+    display: flex;
+}
+button {
+    width: 100px;
+    height: 100px;
+    color: red;
+    background-color: lightcyan;
+    font-size: 30px;
+    border: 1px solid lightseagreen;
+}
+input {
+    width: 390px;
+    height: 80px;
+    font-size: 30px;
+    border: 2px solid lightseagreen;
+    color: darkcyan;
+}
+.button-box {
+    margin-top: 5px;
+}
